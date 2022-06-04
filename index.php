@@ -1,3 +1,8 @@
+<!-- < ?php 
+  session_start();
+
+  if (!isset($_SESSION['username'])) {
+?> -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +12,7 @@
     <title>Chat App - Login</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/logo.png">
 </head>
 <body class="d-flex justify-content-center align-items-center vh-100">
     <div class="w-400 p-5 shadow rounded">
@@ -15,16 +21,19 @@
             <img src="img/logo.png" class="w-25">
             <h3 class="display-4 fs-1 text-center">LOGIN</h3>
             </div>
+            <?php if (isset($_GET['error'])) { ?>
+                <div class="alert alert-warning" role="alert"> <?php echo htmlspecialchars($_GET['error']);?> </div>
+                <?php } ?>
             <?php if (isset($_GET['success'])) { ?>
                 <div class="alert alert-warning" role="alert"> <?php echo htmlspecialchars($_GET['success']);?> </div>
                 <?php } ?>
             <div class="mb-3">
                 <label class="form-label">User Name</label>
-                <input type="text" class="form-control">
+                <input type="text" name="username" class="form-control">
             </div>
             <div class="mb-3">
                 <label class="form-label">Password</label>
-                <input type="password" class="form-control">
+                <input type="password" name="password" class="form-control">
             </div>
           <button type="submit" class="btn btn-primary"> LOGIN </button>
           <a href="signup.php">Sign Up</a>
@@ -34,6 +43,11 @@
     
 </body>
 </html>
-
+<!-- < ?php
+  } else{
+  	header("Location:home.php");
+   	exit;
+  }
+ ?> -->
 
 <!-- 35:28 -->
