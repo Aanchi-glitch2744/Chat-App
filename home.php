@@ -43,7 +43,9 @@
         <div class="input-group mb-3">
     			<input type="text" placeholder="Search..." id="searchText" class="form-control">
     			<button class="btn btn-primary" id="serachBtn">
-    			        <i class="fa fa-search"></i>	
+    			        <i class="fa fa-search"></i>
+                  
+                  
     			</button>       
     		</div> 
       
