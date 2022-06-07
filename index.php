@@ -1,8 +1,8 @@
-<!-- < ?php 
+<?php 
   session_start();
 
   if (!isset($_SESSION['username'])) {
-?> -->
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,11 +43,11 @@
     
 </body>
 </html>
-<!-- < ?php
+<?php
   } else{
   	header("Location:home.php");
    	exit;
   }
- ?> -->
+ ?>
 
-<!-- 35:28 -->
+<!-- 47:01 -->

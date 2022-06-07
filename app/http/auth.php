@@ -43,7 +43,7 @@ if(isset($_POST['username']) &&
           if (password_verify($password, $user['password'])) {
  
             # successfully logged in
-            echo $username;
+            // echo $username;
             # creating the SESSION
             $_SESSION['username'] = $user['username'];
             $_SESSION['name'] = $user['name'];
